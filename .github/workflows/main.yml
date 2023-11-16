@@ -13,5 +13,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Log in to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.USER_NAME}}
+        password: ${{ secrets.TOKEN}}
+
     - name: Build and push Docker image
       uses: docker/build-push-action@v2
+ 
