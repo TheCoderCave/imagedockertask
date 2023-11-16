@@ -17,8 +17,8 @@ jobs:
       run: docker login --username ${{ secrets.USER_NAME }} --password ${{ secrets.TOKEN }}
 
     - name: Pushing to Docker Hub
-      run: docker build -t ${{ secrets.USER_NAME }}/imageGit .
+      run: docker build -t ${{ secrets.USER_NAME }}/imagegit .
 
 
     - name: Pushing to Docker Hub
-      run: docker push ${{ secrets.USER_NAME }}/imageGit
+      run: docker push ${{ secrets.USER_NAME }}/imagegit
