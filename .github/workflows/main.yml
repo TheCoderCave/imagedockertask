@@ -1,1 +1,17 @@
+name: Docker Build and Push
 
+on:
+  push:
+    branches:
+      - docker-branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
